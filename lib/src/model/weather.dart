@@ -82,8 +82,8 @@ class Sys {
   DateTime sunset;
 
   factory Sys.fromJson(Map<String, dynamic> json) => Sys(
-    sunrise: DateTime.fromMicrosecondsSinceEpoch(json["sunrise"]),
-    sunset: DateTime.fromMicrosecondsSinceEpoch(json["sunset"]),
+    sunrise: DateTime.fromMillisecondsSinceEpoch(json["sunrise"] * 1000),
+    sunset: DateTime.fromMillisecondsSinceEpoch(json["sunset"] * 1000),
   );
 
   Map<String, dynamic> toJson() => {
