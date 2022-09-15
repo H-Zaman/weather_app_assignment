@@ -54,8 +54,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
             if(_locationController.location == null) return _NoLocationView();
 
-            return CircularProgressIndicator(
-              color: Colors.white,
+            return Center(
+              child: Text(
+                'Please enable internet connection',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20
+                ),
+              )
             );
           })
         )
